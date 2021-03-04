@@ -12,14 +12,14 @@
 #     print(i,"welcome to party")
 
 # # 2
-guests = ['aman', 'rafy', 'mubi']
+# guests = ['aman', 'rafy', 'mubi']
 # for i in guests:
 #     print(i,"2nd list for those who are replaced")
-guests.insert(0,"imran")
-guests.insert(1,"sharrif")
-guests.append("osama")
-for i in guests:
-    print(i,"new list of person")
+# guests.insert(0,"imran")
+# guests.insert(1,"sharrif")
+# guests.append("osama")
+# for i in guests:
+#     print(i,"new list of person")
 
 
 # Task 3
@@ -48,3 +48,68 @@ for i in guests:
 # e3.displayEmployees()
 # # e3.displayCount()
 # print("Number Of Employees",Employees.employeeCount)
+
+# x = int(input("Input first number: "))
+# y = int(input("Input second number: "))
+# z = int(input("Input third number: "))
+# x=1;y=3;z=5
+# print("3 number addition=",x+y+z)
+# --------------------------
+# lab 4 task1
+# import queue
+# q=[19,8,2]
+# q = queue.Queue()
+#
+# for i in range(5):
+#     q.put(i)
+#
+# while not q.empty():
+#     print(q.get())
+
+# Adjascency List representation in Python
+
+# 
+# lab 4 task 3
+class AdjNode:
+    def __init__(self, value):
+        self.vertex = value
+        self.next = None
+
+
+class Graph:
+    def __init__(self, num):
+        self.V = num
+        self.graph = [None] * self.V
+
+    # Add edges
+    def add_edge(self, s, d):
+        node = AdjNode(d)
+        node.next = self.graph[s]
+        self.graph[s] = node
+
+        node = AdjNode(s)
+        node.next = self.graph[d]
+        self.graph[d] = node
+
+    # Print the graph
+    def print_agraph(self):
+        for i in range(self.V):
+            print("Vertex " + str(i) + ":", end="")
+            temp = self.graph[i]
+            while temp:
+                print(" -> {}".format(temp.vertex), end="")
+                temp = temp.next
+            print(" \n")
+
+
+if __name__ == "__main__":
+    V = 5
+
+    # Create graph and edges
+    graph = Graph(V)
+    graph.add_edge(0, 1)
+    graph.add_edge(0, 2)
+    graph.add_edge(0, 3)
+    graph.add_edge(1, 2)
+
+    graph.print_agraph()
