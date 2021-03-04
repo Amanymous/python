@@ -1,0 +1,50 @@
+# Task 1
+# name = ['aman', 'rafy', 'mubi']
+#
+# print(name[0])
+# print(name[1])
+# print(name[2])
+
+# Task 2
+# 1
+# guests=["aman",'rafy',"mubi"]
+# for i in guests:
+#     print(i,"welcome to party")
+
+# # 2
+guests = ['aman', 'rafy', 'mubi']
+# for i in guests:
+#     print(i,"2nd list for those who are replaced")
+guests.insert(0,"imran")
+guests.insert(1,"sharrif")
+guests.append("osama")
+for i in guests:
+    print(i,"new list of person")
+
+
+# Task 3
+
+# class Employees:
+#
+#
+#     employeeCounts = 0
+#     def __init__(self, name, salary):
+#         self.name = name
+#         self.salary = salary
+#         Employees.employeeCounts += 1
+#
+#     # def displayCount(self):
+#     #     print("Number of Employees :",Employees.employeeCounts)
+#     def displayEmployees(self):
+#         print("Name : ", self.name, ", Salary: ", self.salary)
+#
+# e1 = Employees("jack", 100000)
+# e2 = Employees("john", 900000000)
+# e3 = Employees("jose",9000000)
+# e1.displayEmployees()
+# # e1.displayCount()
+# e2.displayEmployees()
+# # e2.displayCount()
+# e3.displayEmployees()
+# # e3.displayCount()
+# print("Number Of Employees",Employees.employeeCount)
